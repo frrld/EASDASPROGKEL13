@@ -7,11 +7,11 @@
  * Group Capstone Project: Snake and Ladder Game
  * -----------------------------------------------------
  * Class    : C
- * Group    : XX
+ * Group    : 13
  * Members  :
- * 1. Student ID - Full Name
- * 2. Student ID - Full Name
- * 3. Student ID - Full Name
+ * 1. 5026231175 - Muhammad Farrel Danendra
+ * 2. 5026231191 - Dzakiyyah Nur Aini Hendryna
+ * 3. 5026231228 - Annisa Nur Fauzi
  * ------------------------------------------------------
  */
 
@@ -19,7 +19,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        SnakeAndLadder g1 = new SnakeAndLadder(100);
-        g1.play();
+        Audio player = new Audio();
+        String soundFileName = "C:/Users/Farrel MSI/IdeaProjects/EAS DASPROG/src/mixkit-bonus-extra-in-a-video-game-2064.wav";
+        player.playSound(soundFileName);
+        new SnakeAndLadderGUI();
     }
 }

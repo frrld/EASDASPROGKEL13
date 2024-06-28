@@ -5,37 +5,42 @@
  * Group Capstone Project: Snake and Ladder Game
  * -----------------------------------------------------
  * Class    : C
- * Group    : XX
+ * Group    : 13
  * Members  :
- * 1. Student ID - Full Name
- * 2. Student ID - Full Name
- * 3. Student ID - Full Name
+ * 1. 5026231175 - Muhammad Farrel Danendra
+ * 2. 5026231191 - Dzakiyyah Nur Aini Hendryna
+ * 3. 5026231228 - Annisa Nur Fauzi
  * ------------------------------------------------------
  */
 
 import java.util.Scanner;
 
 public class Player{
-    //states
+    // states
     private String userName;
     private int position;
+    private int lives;
 
-    //methods
-    //constructor
+    // methods
+    // constructor
     public Player(String userName){
         this.userName = userName;
         this.position = 0;
+        this.lives = 3;
     }
 
-    //setter
+    // setter
     public void setUserName(String userName){
         this.userName = userName;
     }
     public void setPosition(int position){
         this.position = position;
     }
+    public void setLives(int lives){
+        this.lives = lives;
+    }
 
-    //getter
+    // getter
     public String getUserName(){
         return userName;
     }
@@ -44,16 +49,29 @@ public class Player{
         return position;
     }
 
-    //rolldice method
-    public int rollDice(){
-        return (int) (Math.random()*6)+1;
+    public int getLives(){
+        return lives;
     }
 
-    //move around method
+    // rollDice method
+    public int rollDice(){
+        return (int) (Math.random() * 6) + 1;
+    }
+
+    // moveAround method
     public void moveAround(int x, int boardSize){
         if(this.position + x > boardSize)
             this.position = boardSize - ((this.position + x) % boardSize);
-        else this.position += x;
+        else
+            this.position += x;
     }
 
+    // reduceLives method
+    public void reduceLife(){
+        this.lives--;
+        if(this.lives <= 0){
+            this.lives = 3;
+            this.position = 1;
+        }
+    }
 }

@@ -5,11 +5,11 @@
  * Group Capstone Project: Snake and Ladder Game
  * -----------------------------------------------------
  * Class    : C
- * Group    : XX
+ * Group    : 13
  * Members  :
- * 1. Student ID - Full Name
- * 2. Student ID - Full Name
- * 3. Student ID - Full Name
+ * 1. 5026231175 - Muhammad Farrel Danendra
+ * 2. 5026231191 - Dzakiyyah Nur Aini Hendryna
+ * 3. 5026231228 - Annisa Nur Fauzi
  * ------------------------------------------------------
  */
 
